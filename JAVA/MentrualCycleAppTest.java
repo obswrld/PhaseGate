@@ -18,4 +18,16 @@ public class MentrualCycleAppTest {
 		LocalDate expectedOvulationDate = LocalDate.of(2024, 7, 15);
 		assertEquals(expectedOvulationDate, MenstrualCycleApp.calculateOvulationDate(lastPeriodDate));
 	}
+
+	@Test
+	public void testCycleLengthValid() {
+		assertTrue(MenstrualCycleApp.isCycleLengthValid(28));
+		assertFalse(MenstrualCycleApp.isCycleLengthValid(20));
+	}
+	
+	@Test
+	public void testPeriodLengthValid() {
+		assertTrue(MenstrualCycleApp.isPeriodLengthValid(5));
+		assertFalse(MenstrualCycleApp.isPeriodLengthValid(10));
+	}
 }
