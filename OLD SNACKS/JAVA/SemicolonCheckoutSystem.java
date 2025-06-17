@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class SemicolonCheckoutSystem {
@@ -37,11 +38,12 @@ public class SemicolonCheckoutSystem {
 	}
 
 	private static void displayInvoice(String customerName, String cashierName, ArrayList<String>productDetails, double subTotal, double discount, double vat, double total) {
+		LocalDate currentDate = LocalDate.now();
 		System.out.println("\nSemicolon Stores");
 		System.out.println("Main Branch");
 		System.out.println("Location: 312, HERBERT MACULAY WAY< SABO YABA< LAGOS.");
 		System.out.println("TEL:  03293828343");
-		System.out.println("Date:   " + java.time.LocalDate.now());
+		System.out.println("Date:   " + currentDate);
 		System.out.println("Cashier:   " + cashierName);
 		System.out.println("Customer:    " + customerName);
 		System.out.println("======================================================");
